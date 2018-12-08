@@ -8,7 +8,7 @@ https://wineroulette.herokuapp.com/
 React / Material-UI
 
 ### Aim
-Wine Roulette allow you to randomly generate a wine suggestion (and get some associated information) from simple criterions (color, price...) and buy it online.
+Wine Roulette allows you to randomly generate a wine suggestion (and get some associated information) from simple criterions (color, price...) and buy it online.
 If you are more experienced in wine field, you can select more precised criterions (varietal, origin).
 
 ### Specifications
