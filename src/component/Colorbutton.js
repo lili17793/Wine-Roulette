@@ -3,7 +3,6 @@ import Redsubcriterion from "./Redsubcriterion";
 import Whitesubcriterion from "./Whitesubcriterion";
 import Rosesubcriterion from "./Rosesubcriterion";
 import Champsubcriterion from "./Champsubcriterion";
-import "../style/Colorbutton.css";
 
 import Grid from "@material-ui/core/Grid";
 import PropTypes from "prop-types";
@@ -32,7 +31,19 @@ const styles = theme => ({
 
   input: {
     display: "none"
-  }
+  },
+
+  unusedGrid: {
+    border: "3px solid green"
+  },
+
+  resetGrid: {
+    border: "3px solid green"
+  },
+
+  buttonGrid: {
+    border: "3px solid green"
+  },
 });
 
 class Colorbutton extends Component {
@@ -71,10 +82,10 @@ class Colorbutton extends Component {
             className="subCriterionsReset"
             spacing={0}
           >
-            <Grid className="gridDivUseless" item xs={4} sm={2} md={2} lg={4}>
+            <Grid className={classes.unusedGrid} item xs={0} sm={2} md={3} lg={4}>
               <div></div>
             </Grid>
-            <Grid className="gridButtons" item xs={4} sm={8} md={8} lg={4}>
+            <Grid className={classes.buttonGrid} item xs={12} sm={8} md={6} lg={4}>
               <Button
                 variant="contained"
                 color="secondary"
@@ -133,16 +144,14 @@ class Colorbutton extends Component {
               >
                 Sparkling
               </Button>
-
-              {/* <{this.state.color === "Champagne"
-            ? Whitesubcriterion
-            : Redsubcriterion} liftsubStyle={this.props.liftsubStyle} /> */}
             </Grid>
-            <Grid className="gridReset" item xs={4} sm={2} md={2} lg={4}>
+
+            {/* RESET BUTTON GRID */}
+            <Grid className={classes.resetGrid} item xs={12} sm={2} md={3} lg={4}>
               <BoutonReset liftReset={this.liftReset} />
             </Grid>
           </Grid>
-          <div className="divUseless" />
+          <div />
 
           {this.state.color[0] === "Red Wine" && (
             <Redsubcriterion liftsubStyle={this.props.liftsubStyle} />
@@ -157,14 +166,13 @@ class Colorbutton extends Component {
             <Champsubcriterion liftsubStyle={this.props.liftsubStyle} />
           )}
 
-          <div className="divUseless2" />
+          <div />
         </div>
       );
 
-    {
-      /* {this.state.color} === "Red Wine" ? return <Redsubcriterion liftsubStyle={this.props.liftsubStyle} /> : ""
-       */
-    }
+    // {
+    //   {this.state.color} === "Red Wine" ? return <Redsubcriterion liftsubStyle={this.props.liftsubStyle} /> : "" 
+    // }
   }
 }
 

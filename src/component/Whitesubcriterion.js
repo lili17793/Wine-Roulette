@@ -55,7 +55,7 @@ class Whitesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.whiteSubCriterion[0] == "XD - Extra Dry"
+            this.state.whiteSubCriterion[0] === "XD - Extra Dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -68,7 +68,7 @@ class Whitesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.whiteSubCriterion[0] == "D - Dry"
+            this.state.whiteSubCriterion[0] === "D - Dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -83,7 +83,7 @@ class Whitesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.whiteSubCriterion[0] == "S - Sweet"
+            this.state.whiteSubCriterion[0] === "S - Sweet"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }

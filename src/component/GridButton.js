@@ -23,6 +23,9 @@ const theme = createMuiTheme({
       main: '#E91E63',
     },
   },
+  typography: {
+    useNextVariants: true,
+  },
 });
 
 function GridButton(props) {

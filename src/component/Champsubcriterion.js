@@ -55,7 +55,7 @@ class Champsubscriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.champSubCriterion[0] == "XD - Extra Dry"
+            this.state.champSubCriterion[0] === "XD - Extra Dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -68,7 +68,7 @@ class Champsubscriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.champSubCriterion[0] == "D - Dry"
+            this.state.champSubCriterion[0] === "D - Dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -83,7 +83,7 @@ class Champsubscriterion extends Component {
           color="secondary"
           className={
 
-            this.state.champSubCriterion[0] == '-'
+            this.state.champSubCriterion[0] === '-'
 
               ? classes.buttonSelected
               : classes.buttonNotSelected

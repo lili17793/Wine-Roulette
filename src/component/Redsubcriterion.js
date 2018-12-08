@@ -9,25 +9,25 @@ const styles = theme => ({
     margin: theme.spacing.unit,
     backgroundColor: "#603d8b",
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-    '&:hover': {
-      backgroundColor: "#603d8b",
-    },
+    "&:hover": {
+      backgroundColor: "#603d8b"
+    }
   },
 
   buttonNotSelected: {
     margin: theme.spacing.unit,
     backgroundColor: "#f43365",
-    '&:hover': {
-      backgroundColor: '#603d8b',
-      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-    },
+    "&:hover": {
+      backgroundColor: "#603d8b",
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)"
+    }
   },
 
   input: {
     display: "none"
   }
 });
- 
+
 class Redsubcriterion extends Component {
   constructor() {
     super();
@@ -50,7 +50,7 @@ class Redsubcriterion extends Component {
       this.props.liftsubStyle(subStyle);
     }
   };
- 
+
   render() {
     const { classes } = this.props;
 
@@ -60,7 +60,7 @@ class Redsubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.redSubCriterion[0] == "Full-bodied & Smooth"
+            this.state.redSubCriterion[0] === "Full-bodied & Smooth"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -74,15 +74,15 @@ class Redsubcriterion extends Component {
           Full-bodied
         </Button>
 
-		<Button
+        <Button
           variant="contained"
           color="secondary"
-           className={
-            this.state.redSubCriterion[0] == "Light-bodied & Fruity"
+          className={
+            this.state.redSubCriterion[0] === "Light-bodied & Fruity"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
-		  onClick={() =>
+          onClick={() =>
             this.redSubCriterionSelection([
               "Light-bodied & Fruity",
               "Medium-bodied & Fruity"
@@ -95,23 +95,15 @@ class Redsubcriterion extends Component {
         <Button
           variant="contained"
           color="secondary"
-           className={
-            this.state.redSubCriterion[0] == null
+          className={
+            this.state.redSubCriterion[0] === null
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
-		  onClick={() => this.redSubCriterionSelection([null])}
+          onClick={() => this.redSubCriterionSelection([null])}
         >
           Surprise !
         </Button>
-		
-       
-
-        {/* <button onClick={() => this.redSubCriterionSelection('Fruity')}>Fruité</button> */}
-        {/* <button onClick={() => this.redSubCriterionSelection('Smooth')}>léger</button> */}
-        {/* <button onClick={() => this.redSubCriterionSelection('Rich')}>Riche</button> */}
-        {/* <button onClick={() => this.redSubCriterionSelection('Fullbodied')}>Full Full-bodied</button> */}
-        {/* <button onClick={() => this.redSubCriterionSelection('Mediumbodied')}>Doux</button> */}
       </div>
     );
   }

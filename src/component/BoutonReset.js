@@ -8,7 +8,11 @@ const theme = createMuiTheme({
         primary: {
             main: '#2d3436'
         }
-    }});
+    },
+    typography: {
+      useNextVariants: true,
+    },
+});
 
 class BoutonReset extends React.Component {
 

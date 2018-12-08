@@ -63,7 +63,7 @@ class App extends Component {
           <p />
           <div className="rangeSlider">
           <Prix liftPrice={this.liftPrice} />
-          <span>between {(this.state.minprix)/100} $ and {(this.state.maxprix)/100} $</span>
+          <span>{(this.state.minprix)/100} $ to {(this.state.maxprix)/100} $</span>
           </div>
           <p />
           <Colorbutton

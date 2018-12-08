@@ -55,7 +55,7 @@ class Rosesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.roseSubCriterion[0] == "Easygoing & Fruity"
+            this.state.roseSubCriterion[0] === "Easygoing & Fruity"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -68,7 +68,7 @@ class Rosesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.roseSubCriterion[0] == "Medium-bodied & Dry"
+            this.state.roseSubCriterion[0] === "Medium-bodied & Dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }
@@ -83,7 +83,7 @@ class Rosesubcriterion extends Component {
           variant="contained"
           color="secondary"
           className={
-            this.state.roseSubCriterion[0] == "Soft & Off-dry"
+            this.state.roseSubCriterion[0] === "Soft & Off-dry"
               ? classes.buttonSelected
               : classes.buttonNotSelected
           }

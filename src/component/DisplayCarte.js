@@ -99,7 +99,7 @@ class DisplayCarte extends Component {
                   alignItems="center"
                 >
                   <Grid item xs={9}>
-                    <Typography className="nameOrigin">
+                    <Typography component={'span'} className="nameOrigin">
                       <CardHeader
                         title={this.props.carteVin.name}
                         subheader={`${this.props.carteVin.pays_region}, ${
@@ -136,7 +136,7 @@ class DisplayCarte extends Component {
                 </Grid>
 
                 <CardContent>
-                  <Typography component="p" className="descriptionCourte">
+                  <Typography component={'span'} className="descriptionCourte">
                     <p className="servingSuggestion">Serving suggestion: </p>
                     {this.props.carteVin.descriptionCourte}
                   </Typography>
@@ -194,8 +194,8 @@ class DisplayCarte extends Component {
                   <CardContent>
                     <Typography paragraph className="descriptionDetaillee">
                       {this.props.carteVin.descriptionDetaillee !== null 
-                      ? this.props.carteVin.descriptionDetaillee.map(e => (
-                          <p>{e}</p>)) 
+                      ? this.props.carteVin.descriptionDetaillee.map((e, index) => (
+                          <p key={index}>{e}</p>)) 
                       : "Pas de description, va sur Wikipedia calice"
                       }
                     </Typography>

@@ -36,7 +36,7 @@ function Footer(props) {
           <Grid container spacing={24}>
 
             <Grid item xs={3}>
-              <Typography variant="body1" color="inherit">
+              <Typography component={'span'} variant="body1" color="inherit">
                 <Modal />
               </Typography>
             </Grid>
@@ -61,7 +61,7 @@ function Footer(props) {
 
           </Grid>
 
-          <Grid container spacing={2}>
+          <Grid container spacing={8}>
             <Grid item xs={12} sm={12}>
                 <Typography className="rights" variant="caption" color="inherit" >
                   © All right reserved Wine Roulette
