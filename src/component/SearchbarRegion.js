@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/lib/animated";
 import suggestionsRegion from "./RegionList";
+import BoutonReset from "./BoutonReset";
 
 class SearchbarRegion extends Component {
   state = {
@@ -14,21 +15,30 @@ class SearchbarRegion extends Component {
     this.setState({ selectedOption });
     this.props.liftsearchbarRegion(selectedOption);
   };
+
+  liftReset = () => {
+    window.location.reload();
+    // window.location.href = "./";
+  };
+
   render() {
     const { selectedOption } = this.state;
     return (
-      <Select
-        key={suggestionsRegion.label}
-        closeMenuOnSelect={false}
-        placeholder="Origin"
-        components={makeAnimated()}
-        isMulti={true}
-        options={suggestionsRegion}
-        className="basic-multi-select"
-        classNamePrefix="Du pinard Non de Dieu !!!"
-        value={selectedOption}
-        onChange={this.handleChange}
-      />
+      <div>
+        <Select
+          key={suggestionsRegion.label}
+          closeMenuOnSelect={false}
+          placeholder="Origin"
+          components={makeAnimated()}
+          isMulti={true}
+          options={suggestionsRegion}
+          className="basic-multi-select"
+          classNamePrefix="Du pinard Non de Dieu !!!"
+          value={selectedOption}
+          onChange={this.handleChange}
+        />
+        <BoutonReset liftReset={this.liftReset} />
+      </div>
     );
   }
 }

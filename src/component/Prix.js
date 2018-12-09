@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
-import '../style/Prix.css'
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import "rc-slider/assets/index.css";
 import "rc-tooltip/assets/bootstrap.css";
 import Grid from "@material-ui/core/Grid";
 import Slider from "rc-slider";
-// import Typography from "@material-ui/core/Typography";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 const wrapperStyle = { width: 280, marginTop: 5 };
 
-
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit,
-    backgroundColor: "#B7143F"
+    margin: theme.spacing.unit
   },
   input: {
     display: "none"
   }
 });
 
- 
 class Prix extends Component {
   constructor() {
     super();
@@ -38,32 +33,32 @@ class Prix extends Component {
   };
 
   render() {
-
     return (
-      <Grid
-            container
-            direction="column"
-            alignItems="center"
-            justify="center"
-            alignContent="center"
-          >
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <div style={wrapperStyle}>
-            <Range
-              min={0}
-              max={30000}
-              step={100}
-              value={this.state.priceMinMax}
-              onChange={this.handlePriceChange}
-              allowCross={false}
-              pushable={500}
-              tipFormatter={value => `${Math.floor(value / 100)}$`}
-              {...this.props}
-            />
-          </div>
+      <div className="price">
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justify="center"
+          alignContent="center"
+        >
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <div style={wrapperStyle}>
+              <Range
+                min={0}
+                max={30000}
+                step={100}
+                value={this.state.priceMinMax}
+                onChange={this.handlePriceChange}
+                allowCross={false}
+                pushable={500}
+                tipFormatter={value => `${Math.floor(value / 100)}$`}
+                {...this.props}
+              />
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
-      
+      </div>
     );
   }
 }

@@ -7,20 +7,20 @@ import Button from "@material-ui/core/Button";
 const styles = theme => ({
   buttonSelected: {
     margin: theme.spacing.unit,
-    backgroundColor: "#603d8b",
+    backgroundColor: "#F2545B",
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-    '&:hover': {
-      backgroundColor: "#603d8b",
-    },
+    "&:hover": {
+      backgroundColor: "#F2545B"
+    }
   },
 
   buttonNotSelected: {
     margin: theme.spacing.unit,
-    backgroundColor: "#f43365",
-    '&:hover': {
-      backgroundColor: '#603d8b',
-      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-    },
+    backgroundColor: "#B7143F",
+    "&:hover": {
+      backgroundColor: "#F2545B",
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)"
+    }
   },
 
   input: {
@@ -33,7 +33,7 @@ class Whitesubcriterion extends Component {
     super();
     this.state = { whiteSubCriterion: ["vin"] };
   }
- 
+
   whiteSubCriterionSelection = subStyle => {
     // Si je clique et que l'état actuel est sur x-dry/dry.. (buttonSelected) --> je repasse en état initial (buttonNotSelected)
     if (subStyle[0] === this.state.whiteSubCriterion[0]) {

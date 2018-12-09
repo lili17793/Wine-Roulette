@@ -6,7 +6,6 @@ import "./style/App.css";
 import Footer from "./component/Footer/Footer";
 import Searchbar from "./component/Searchbar";
 import SearchbarRegion from "./component/SearchbarRegion";
-//import BoutonReset from "./component/BoutonReset";
 
 class App extends Component {
   state = {
@@ -78,6 +77,7 @@ class App extends Component {
             <p />
             <SearchbarRegion liftsearchbarRegion={this.liftsearchbarRegion} />
           </div>
+          
           <NbWinePossible
             color={this.state.color}
             subStyle={this.state.subStyle}
